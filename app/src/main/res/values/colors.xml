@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="launcher_background">#0000FF</color> <!-- 纯蓝色背景 -->
+    <color name="button_background">#3366FF</color> <!-- 按钮的蓝色 -->
+    <color name="focus_highlight">#FFFFFF</color>   <!-- 焦点高亮边框颜色 -->
+    <color name="text_color_white">#FFFFFF</color>
+</resources>

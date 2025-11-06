@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 获得焦点时的状态 -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#33FFFFFF" /> <!-- 半透明白色背景 -->
+            <stroke android:width="4dp" android:color="@color/focus_highlight" /> <!-- 白色描边 -->
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+    <!-- 默认状态 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#80000000" /> <!-- 半透明黑色背景，模拟原图效果 -->
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+</selector>

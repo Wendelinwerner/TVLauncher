@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0000FF"
+    tools:context=".MainActivity">
+
+    <!-- 顶部状态栏区域 -->
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_usb_status"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_usb"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_wifi_status"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_wifi_4" />
+
+        <TextView
+            android:id="@+id/tv_time_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="8:08 AM" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="Saturday, November 11" />
+    </LinearLayout>
+
+    <!-- 上方应用快捷方式容器 -->
+    <LinearLayout
+        android:id="@+id/app_shortcuts_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/action_buttons_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <include android:id="@+id/shortcut_netflix" layout="@layout/item_app_shortcut" android:layout_marginHorizontal="12dp"
+            tools:ignore="IncludeLayoutParam" />
+        <include android:id="@+id/shortcut_youtube" layout="@layout/item_app_shortcut" android:layout_marginHorizontal="12dp"
+            tools:ignore="IncludeLayoutParam" />
+        <include android:id="@+id/shortcut_google_play" layout="@layout/item_app_shortcut" android:layout_marginHorizontal="12dp"
+            tools:ignore="IncludeLayoutParam" />
+        <include android:id="@+id/shortcut_chrome" layout="@layout/item_app_shortcut" android:layout_marginHorizontal="12dp"
+            tools:ignore="IncludeLayoutParam" />
+
+    </LinearLayout>
+
+    <!-- 下方功能按钮容器 -->
+    <LinearLayout
+        android:id="@+id/action_buttons_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/app_shortcuts_container"
+        app:layout_constraintStart_toStartOf="@+id/app_shortcuts_container"
+        app:layout_constraintTop_toBottomOf="@+id/app_shortcuts_container">
+
+        <include android:id="@+id/btn_mail" layout="@layout/item_action_button" android:layout_marginHorizontal="8dp"
+            tools:ignore="IncludeLayoutParam" />
+        <include android:id="@+id/btn_miracast" layout="@layout/item_action_button" android:layout_marginHorizontal="8dp"
+            tools:ignore="IncludeLayoutParam" />
+        <include android:id="@+id/btn_signal_source" layout="@layout/item_action_button" android:layout_marginHorizontal="8dp"
+            tools:ignore="IncludeLayoutParam" />
+        <include android:id="@+id/btn_my_apps" layout="@layout/item_action_button" android:layout_marginHorizontal="8dp"
+            tools:ignore="IncludeLayoutParam" />
+        <include android:id="@+id/btn_settings" layout="@layout/item_action_button" android:layout_marginHorizontal="8dp"
+            tools:ignore="IncludeLayoutParam" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
